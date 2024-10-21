@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../Images/logo.png"
 
-const NavBar = () => {
+const Header = () => {
   return (
      <nav>
         <img src={logo} alt="Logo" />
@@ -9,4 +9,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Header

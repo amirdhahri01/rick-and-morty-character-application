@@ -1,6 +1,6 @@
 import './App.css';
-import NavBar from './Components/NavBar';
-import CharacterList from './Components/CharacterList';
+import Header from './Components/Header';
+import CharacterCardsList from './Components/CharacterCardsList';
 import SearchBar from './Components/SearchBar';
 import { useEffect, useState } from 'react';
 import axios from "./Helpers/api";
@@ -19,9 +19,9 @@ function App() {
   }, [query])
   return (
     <>
-      <NavBar/>
+      <Header/>
       <SearchBar setQuery={(query) => {setQuery(query)}}/>
-      {loading ? Spinner :  <CharacterList items={items}/>}
+      {loading ? Spinner :  <CharacterCardsList items={items}/>}
     </>
   );
 }
