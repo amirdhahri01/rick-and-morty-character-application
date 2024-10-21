@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <Header/>
       <SearchBar setQuery={(query) => {setQuery(query)}}/>
-      {loading ? Spinner :  <CharacterCardsList items={items}/>}
+      {loading ? <Spinner/> :  <CharacterCardsList items={items}/>}
     </div>
   );
 }
