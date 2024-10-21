@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({setQuery}) => {
+    const [text , setText] = useState("");
+    const handleChange = (e) => {
+        setText(e.target.value);
+        setQuery(text);
+    }
   return (
-    <div>SearchBar</div>
-  )
-}
+    <section className="search-bar">
+      <form action="">
+        <input
+          className="form-control"
+          type="text"
+          placeholder="Search Characters"
+          name="search"
+          id="search"
+          value={text}
+          onChange={handleChange}
+          autoFocus
+        />
+      </form>
+    </section>
+  );
+};
 
-export default SearchBar
+export default SearchBar;
