@@ -20,7 +20,7 @@ function App() {
     <>
       <NavBar/>
       <SearchBar setQuery={(query) => {setQuery(query)}}/>
-      <CharacterList/>
+      <CharacterList items={items}/>
     </>
   );
 }

@@ -1,8 +1,15 @@
 import React from 'react'
+import CharacterCard from './CharacterCard'
 
-const CharacterList = () => {
+const CharacterList = ({items}) => {
   return (
-    <div>CharacterList</div>
+   <section className="characters-list">
+        {items.map((item) => {
+            return(
+                <CharacterCard item={item} key={item.id}/>
+            )
+        })}
+   </section>
   )
 }
 
