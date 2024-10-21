@@ -3,10 +3,11 @@ import NavBar from './Components/NavBar';
 import CharacterList from './Components/CharacterList';
 import SearchBar from './Components/SearchBar';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from "./Helpers/api";
+import Spinner from './Components/Spinner';
 function App() {
   const [items , setItems] = useState([]);
-  const [loading , setLoading]  = useState(false);
+  const [loading , setLoading]  = useState(true);
   const [query , setQuery] = useState("");
   useEffect(()=>{
     const fetchItems = async () => {
@@ -20,7 +21,7 @@ function App() {
     <>
       <NavBar/>
       <SearchBar setQuery={(query) => {setQuery(query)}}/>
-      <CharacterList items={items}/>
+      {loading ? Spinner :  <CharacterList items={items}/>}
     </>
   );
 }
