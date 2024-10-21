@@ -15,7 +15,7 @@ function App() {
         setItems(results.data.results);
         setLoading(false);
       } catch (err) {
-        console.log(err.message);
+        setLoading(true);
       }
     };
     fetchItems();

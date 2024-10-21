@@ -45,6 +45,11 @@ a {
 ul {
   list-style: none;
 }
+.spinner-img{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
 .characters-cards-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
