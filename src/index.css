@@ -8,7 +8,13 @@
 
 /* End of global rules section */
 
-Start of nav
+/* Start of header section */
+
+.logo{
+  width: 200px;
+}
+
+/* End of header section */
 
 /* Start of spinner section  */
 
