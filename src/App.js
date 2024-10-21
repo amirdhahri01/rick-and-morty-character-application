@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './Components/Header';
 import CharacterCardsList from './Components/CharacterCardsList';
 import SearchBar from './Components/SearchBar';
@@ -18,11 +17,11 @@ function App() {
     fetchItems();
   }, [query])
   return (
-    <>
+    <div className="app">
       <Header/>
       <SearchBar setQuery={(query) => {setQuery(query)}}/>
       {loading ? Spinner :  <CharacterCardsList items={items}/>}
-    </>
+    </div>
   );
 }
 
